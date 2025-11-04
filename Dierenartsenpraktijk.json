@@ -1,0 +1,322 @@
+{
+  "name": "Dierenartsenpraktijk",
+  "elements": [
+    {
+      "id": "entity-1",
+      "type": "entity",
+      "x": 202,
+      "y": 376,
+      "text": "Klant",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-1",
+      "type": "attribute",
+      "x": 62,
+      "y": 200,
+      "text": "EigenaarID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-2",
+      "type": "attribute",
+      "x": 10,
+      "y": 288,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-3",
+      "type": "attribute",
+      "x": 16,
+      "y": 396,
+      "text": "Telefoon",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-4",
+      "type": "attribute",
+      "x": 64,
+      "y": 476,
+      "text": "Email",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-2",
+      "type": "entity",
+      "x": 586,
+      "y": 138,
+      "text": "Huisdier",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-5",
+      "type": "attribute",
+      "x": 538,
+      "y": -36,
+      "text": "HuisdierID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-6",
+      "type": "attribute",
+      "x": 424,
+      "y": 24,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-7",
+      "type": "attribute",
+      "x": 334,
+      "y": 106,
+      "text": "Ras",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-8",
+      "type": "attribute",
+      "x": 730,
+      "y": -4,
+      "text": "Geboortedatum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-3",
+      "type": "entity",
+      "x": 1130,
+      "y": 262,
+      "text": "Personeelslid",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-9",
+      "type": "attribute",
+      "x": 1364,
+      "y": 120,
+      "text": "PersoneelslidID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-10",
+      "type": "attribute",
+      "x": 1382,
+      "y": 220,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-11",
+      "type": "attribute",
+      "x": 1084,
+      "y": 72,
+      "text": "Van wacht",
+      "color": "#ef4444"
+    },
+    {
+      "id": "relationship-1",
+      "type": "relationship",
+      "x": 396,
+      "y": 288,
+      "text": "Is eigenaar van",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-2",
+      "type": "relationship",
+      "x": 780,
+      "y": 262,
+      "text": "Consultatie",
+      "color": "#eab308"
+    },
+    {
+      "id": "attribute-12",
+      "type": "attribute",
+      "x": 830,
+      "y": 458,
+      "text": "Datum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-13",
+      "type": "attribute",
+      "x": 628,
+      "y": 410,
+      "text": "Diagnose",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-14",
+      "type": "attribute",
+      "x": 682,
+      "y": 494,
+      "text": "Totaalprijs",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-1762249206726",
+      "type": "attribute",
+      "x": 1239,
+      "y": 54.0961894323342,
+      "text": "Functie",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-1762249223264",
+      "type": "attribute",
+      "x": 832,
+      "y": 59.99999999999997,
+      "text": "Soort",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-1762249251600",
+      "type": "entity",
+      "x": 1582,
+      "y": 398,
+      "text": "Specialisatie",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-1762249265936",
+      "type": "attribute",
+      "x": 1792,
+      "y": 402,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "relationship-1762249307108",
+      "type": "relationship",
+      "x": 1342,
+      "y": 372,
+      "text": "Specialiseert in",
+      "color": "#eab308"
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn-1",
+      "from": "entity-1",
+      "to": "attribute-1"
+    },
+    {
+      "id": "conn-2",
+      "from": "entity-1",
+      "to": "attribute-2"
+    },
+    {
+      "id": "conn-3",
+      "from": "entity-1",
+      "to": "attribute-3"
+    },
+    {
+      "id": "conn-4",
+      "from": "entity-1",
+      "to": "attribute-4"
+    },
+    {
+      "id": "conn-5",
+      "from": "entity-2",
+      "to": "attribute-5"
+    },
+    {
+      "id": "conn-6",
+      "from": "entity-2",
+      "to": "attribute-6"
+    },
+    {
+      "id": "conn-7",
+      "from": "entity-2",
+      "to": "attribute-7"
+    },
+    {
+      "id": "conn-8",
+      "from": "entity-2",
+      "to": "attribute-8"
+    },
+    {
+      "id": "conn-9",
+      "from": "entity-3",
+      "to": "attribute-9"
+    },
+    {
+      "id": "conn-10",
+      "from": "entity-3",
+      "to": "attribute-10"
+    },
+    {
+      "id": "conn-11",
+      "from": "entity-3",
+      "to": "attribute-11"
+    },
+    {
+      "id": "conn-12",
+      "from": "relationship-1",
+      "to": "entity-1",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-13",
+      "from": "relationship-1",
+      "to": "entity-2",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-14",
+      "from": "relationship-2",
+      "to": "entity-2",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-15",
+      "from": "relationship-2",
+      "to": "entity-3",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-16",
+      "from": "relationship-2",
+      "to": "attribute-12"
+    },
+    {
+      "id": "conn-17",
+      "from": "relationship-2",
+      "to": "attribute-13"
+    },
+    {
+      "id": "conn-18",
+      "from": "relationship-2",
+      "to": "attribute-14"
+    },
+    {
+      "id": "conn-1762249206726",
+      "from": "entity-3",
+      "to": "attribute-1762249206726"
+    },
+    {
+      "id": "conn-1762249223264",
+      "from": "entity-2",
+      "to": "attribute-1762249223264"
+    },
+    {
+      "id": "conn-1762249265936",
+      "from": "entity-1762249251600",
+      "to": "attribute-1762249265936"
+    },
+    {
+      "id": "conn-1762249311573",
+      "from": "relationship-1762249307108",
+      "to": "entity-3",
+      "cardinality": "0,N",
+      "label": ""
+    },
+    {
+      "id": "conn-1762249379718",
+      "from": "relationship-1762249307108",
+      "to": "entity-1762249251600",
+      "cardinality": "0,N"
+    }
+  ],
+  "exportDate": "2025-11-04T09:44:28.715Z"
+}
