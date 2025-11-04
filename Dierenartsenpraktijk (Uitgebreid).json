@@ -44,8 +44,8 @@
     {
       "id": "entity-2",
       "type": "entity",
-      "x": 702,
-      "y": 90,
+      "x": 682,
+      "y": 84,
       "text": "Huisdier",
       "color": "#3b82f6"
     },
@@ -76,16 +76,16 @@
     {
       "id": "entity-3",
       "type": "entity",
-      "x": 1134,
-      "y": 494,
+      "x": 1212,
+      "y": 451,
       "text": "Personeelslid",
       "color": "#3b82f6"
     },
     {
       "id": "attribute-9",
       "type": "attribute",
-      "x": 1364,
-      "y": 358,
+      "x": 1453,
+      "y": 330,
       "text": "PersoneelslidID (PK)",
       "color": "#ef4444"
     },
@@ -100,8 +100,8 @@
     {
       "id": "attribute-11",
       "type": "attribute",
-      "x": 1084,
-      "y": 310,
+      "x": 1155,
+      "y": 311,
       "text": "Van wacht",
       "color": "#ef4444"
     },
@@ -114,34 +114,26 @@
       "color": "#eab308"
     },
     {
-      "id": "relationship-2",
-      "type": "relationship",
-      "x": 780,
-      "y": 262,
-      "text": "Consultatie",
-      "color": "#eab308"
-    },
-    {
       "id": "attribute-12",
       "type": "attribute",
-      "x": 936,
-      "y": 234,
+      "x": 1089,
+      "y": 147,
       "text": "Datum",
       "color": "#ef4444"
     },
     {
       "id": "attribute-13",
       "type": "attribute",
-      "x": 864,
-      "y": 172,
+      "x": 957,
+      "y": 85,
       "text": "Diagnose",
       "color": "#ef4444"
     },
     {
       "id": "attribute-1762249206726",
       "type": "attribute",
-      "x": 1239,
-      "y": 292,
+      "x": 1327,
+      "y": 250,
       "text": "Functie",
       "color": "#ef4444"
     },
@@ -292,8 +284,8 @@
     {
       "id": "entity-new-4",
       "type": "entity",
-      "x": 740,
-      "y": 584,
+      "x": 738,
+      "y": 588,
       "text": "Afspraak",
       "color": "#f97316"
     },
@@ -432,6 +424,30 @@
       "y": 700,
       "text": "Reden",
       "color": "#ef4444"
+    },
+    {
+      "id": "entity-1762250879658",
+      "type": "entity",
+      "x": 940,
+      "y": 283,
+      "text": "Consultatie",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "relationship-1762250958901",
+      "type": "relationship",
+      "x": 995,
+      "y": 450,
+      "text": "Voert uit",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-1762250964312",
+      "type": "relationship",
+      "x": 852,
+      "y": 161,
+      "text": "Neemt deel",
+      "color": "#eab308"
     }
   ],
   "connections": [
@@ -496,28 +512,6 @@
       "from": "relationship-1",
       "to": "entity-2",
       "cardinality": "1,N"
-    },
-    {
-      "id": "conn-14",
-      "from": "relationship-2",
-      "to": "entity-2",
-      "cardinality": "1,N"
-    },
-    {
-      "id": "conn-15",
-      "from": "relationship-2",
-      "to": "entity-3",
-      "cardinality": "1,N"
-    },
-    {
-      "id": "conn-16",
-      "from": "relationship-2",
-      "to": "attribute-12"
-    },
-    {
-      "id": "conn-17",
-      "from": "relationship-2",
-      "to": "attribute-13"
     },
     {
       "id": "conn-1762249206726",
@@ -632,12 +626,6 @@
       "cardinality": "1,1"
     },
     {
-      "id": "conn-new-17",
-      "from": "relationship-new-7",
-      "to": "relationship-2",
-      "cardinality": "1,1"
-    },
-    {
       "id": "conn-new-18",
       "from": "relationship-new-7",
       "to": "entity-new-4",
@@ -725,7 +713,37 @@
       "id": "conn-1762249959725",
       "from": "entity-new-4",
       "to": "attribute-1762249959724"
+    },
+    {
+      "id": "conn-1762250989347",
+      "from": "entity-2",
+      "to": "relationship-1762250964312",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762250993594",
+      "from": "entity-1762250879658",
+      "to": "relationship-1762250964312",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762250997322",
+      "from": "entity-1762250879658",
+      "to": "relationship-1762250958901",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-1762251000891",
+      "from": "relationship-1762250958901",
+      "to": "entity-3",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-1762251003227",
+      "from": "entity-1762250879658",
+      "to": "relationship-new-7",
+      "cardinality": "1,1"
     }
   ],
-  "exportDate": "2025-11-04T10:01:22.046Z"
+  "exportDate": "2025-11-04T10:12:30.324Z"
 }
