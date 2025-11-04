@@ -1,0 +1,731 @@
+{
+  "name": "Dierenartsenpraktijk (Uitgebreid)",
+  "elements": [
+    {
+      "id": "entity-1",
+      "type": "entity",
+      "x": 194,
+      "y": 568,
+      "text": "Klant",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-1",
+      "type": "attribute",
+      "x": 62,
+      "y": 424,
+      "text": "EigenaarID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-2",
+      "type": "attribute",
+      "x": 10,
+      "y": 512,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-3",
+      "type": "attribute",
+      "x": 16,
+      "y": 620,
+      "text": "Telefoon",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-4",
+      "type": "attribute",
+      "x": 64,
+      "y": 700,
+      "text": "Email",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-2",
+      "type": "entity",
+      "x": 702,
+      "y": 90,
+      "text": "Huisdier",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-5",
+      "type": "attribute",
+      "x": 614,
+      "y": -82,
+      "text": "HuisdierID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-6",
+      "type": "attribute",
+      "x": 912,
+      "y": -30,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-8",
+      "type": "attribute",
+      "x": 782,
+      "y": -66,
+      "text": "Geboortedatum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-3",
+      "type": "entity",
+      "x": 1134,
+      "y": 494,
+      "text": "Personeelslid",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-9",
+      "type": "attribute",
+      "x": 1364,
+      "y": 358,
+      "text": "PersoneelslidID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-10",
+      "type": "attribute",
+      "x": 1382,
+      "y": 458,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-11",
+      "type": "attribute",
+      "x": 1084,
+      "y": 310,
+      "text": "Van wacht",
+      "color": "#ef4444"
+    },
+    {
+      "id": "relationship-1",
+      "type": "relationship",
+      "x": 396,
+      "y": 400,
+      "text": "Is eigenaar van",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-2",
+      "type": "relationship",
+      "x": 780,
+      "y": 262,
+      "text": "Consultatie",
+      "color": "#eab308"
+    },
+    {
+      "id": "attribute-12",
+      "type": "attribute",
+      "x": 936,
+      "y": 234,
+      "text": "Datum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-13",
+      "type": "attribute",
+      "x": 864,
+      "y": 172,
+      "text": "Diagnose",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-1762249206726",
+      "type": "attribute",
+      "x": 1239,
+      "y": 292,
+      "text": "Functie",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-1762249251600",
+      "type": "entity",
+      "x": 1582,
+      "y": 636,
+      "text": "Specialisatie",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-1762249265936",
+      "type": "attribute",
+      "x": 1792,
+      "y": 640,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "relationship-1762249307108",
+      "type": "relationship",
+      "x": 1342,
+      "y": 610,
+      "text": "Specialiseert in",
+      "color": "#eab308"
+    },
+    {
+      "id": "entity-new-1",
+      "type": "entity",
+      "x": 930,
+      "y": 1050,
+      "text": "Product",
+      "color": "#10b981"
+    },
+    {
+      "id": "attribute-new-1",
+      "type": "attribute",
+      "x": 998,
+      "y": 1274,
+      "text": "ProductID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-2",
+      "type": "attribute",
+      "x": 820,
+      "y": 1264,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-3",
+      "type": "attribute",
+      "x": 724,
+      "y": 1194,
+      "text": "Prijs",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-4",
+      "type": "attribute",
+      "x": 1140,
+      "y": 1204,
+      "text": "Type (voeding/medicatie)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-new-2",
+      "type": "entity",
+      "x": 1136,
+      "y": 984,
+      "text": "Service",
+      "color": "#10b981"
+    },
+    {
+      "id": "attribute-new-5",
+      "type": "attribute",
+      "x": 1324,
+      "y": 928,
+      "text": "ServiceID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-6",
+      "type": "attribute",
+      "x": 1342,
+      "y": 1022,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-7",
+      "type": "attribute",
+      "x": 1326,
+      "y": 1114,
+      "text": "StandaardPrijs",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-new-3",
+      "type": "entity",
+      "x": 600,
+      "y": 800,
+      "text": "Factuur",
+      "color": "#10b981"
+    },
+    {
+      "id": "attribute-new-8",
+      "type": "attribute",
+      "x": 370,
+      "y": 846,
+      "text": "FactuurID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-9",
+      "type": "attribute",
+      "x": 442,
+      "y": 912,
+      "text": "Datum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "relationship-new-1",
+      "type": "relationship",
+      "x": 800,
+      "y": 900,
+      "text": "FactuurRegel",
+      "color": "#eab308"
+    },
+    {
+      "id": "attribute-new-10",
+      "type": "attribute",
+      "x": 622,
+      "y": 960,
+      "text": "Aantal",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-11",
+      "type": "attribute",
+      "x": 704,
+      "y": 1030,
+      "text": "RegelPrijs",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-new-4",
+      "type": "entity",
+      "x": 740,
+      "y": 584,
+      "text": "Afspraak",
+      "color": "#f97316"
+    },
+    {
+      "id": "attribute-new-12",
+      "type": "attribute",
+      "x": 950,
+      "y": 768,
+      "text": "DatumTijd",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-new-5",
+      "type": "entity",
+      "x": 154,
+      "y": 180,
+      "text": "Opname",
+      "color": "#f97316"
+    },
+    {
+      "id": "attribute-new-13",
+      "type": "attribute",
+      "x": -38,
+      "y": 174,
+      "text": "StartDatum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-14",
+      "type": "attribute",
+      "x": -46,
+      "y": 272,
+      "text": "EindDatum",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-new-6",
+      "type": "entity",
+      "x": -136,
+      "y": 2,
+      "text": "Diersoort",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-new-15",
+      "type": "attribute",
+      "x": -318,
+      "y": -70,
+      "text": "DiersoortID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-16",
+      "type": "attribute",
+      "x": -306,
+      "y": 50,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "entity-new-7",
+      "type": "entity",
+      "x": 270,
+      "y": 8,
+      "text": "Ras",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-new-17",
+      "type": "attribute",
+      "x": 176,
+      "y": -140,
+      "text": "RasID (PK)",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-new-18",
+      "type": "attribute",
+      "x": 298,
+      "y": -138,
+      "text": "Naam",
+      "color": "#ef4444"
+    },
+    {
+      "id": "relationship-new-2",
+      "type": "relationship",
+      "x": 68,
+      "y": 2,
+      "text": "IsSoort",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-new-3",
+      "type": "relationship",
+      "x": 478,
+      "y": 44,
+      "text": "HeeftRas",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-new-4",
+      "type": "relationship",
+      "x": 491,
+      "y": 600,
+      "text": "MaaktAfspraak",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-new-7",
+      "type": "relationship",
+      "x": 736,
+      "y": 399,
+      "text": "VloeitVoortUit",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-new-8",
+      "type": "relationship",
+      "x": 401,
+      "y": 700,
+      "text": "KrijgtFactuur",
+      "color": "#eab308"
+    },
+    {
+      "id": "relationship-new-9",
+      "type": "relationship",
+      "x": 378,
+      "y": 178,
+      "text": "WordtOpgenomen",
+      "color": "#eab308"
+    },
+    {
+      "id": "attribute-1762249959724",
+      "type": "attribute",
+      "x": 1026,
+      "y": 700,
+      "text": "Reden",
+      "color": "#ef4444"
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn-1",
+      "from": "entity-1",
+      "to": "attribute-1"
+    },
+    {
+      "id": "conn-2",
+      "from": "entity-1",
+      "to": "attribute-2"
+    },
+    {
+      "id": "conn-3",
+      "from": "entity-1",
+      "to": "attribute-3"
+    },
+    {
+      "id": "conn-4",
+      "from": "entity-1",
+      "to": "attribute-4"
+    },
+    {
+      "id": "conn-5",
+      "from": "entity-2",
+      "to": "attribute-5"
+    },
+    {
+      "id": "conn-6",
+      "from": "entity-2",
+      "to": "attribute-6"
+    },
+    {
+      "id": "conn-8",
+      "from": "entity-2",
+      "to": "attribute-8"
+    },
+    {
+      "id": "conn-9",
+      "from": "entity-3",
+      "to": "attribute-9"
+    },
+    {
+      "id": "conn-10",
+      "from": "entity-3",
+      "to": "attribute-10"
+    },
+    {
+      "id": "conn-11",
+      "from": "entity-3",
+      "to": "attribute-11"
+    },
+    {
+      "id": "conn-12",
+      "from": "relationship-1",
+      "to": "entity-1",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-13",
+      "from": "relationship-1",
+      "to": "entity-2",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-14",
+      "from": "relationship-2",
+      "to": "entity-2",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-15",
+      "from": "relationship-2",
+      "to": "entity-3",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-16",
+      "from": "relationship-2",
+      "to": "attribute-12"
+    },
+    {
+      "id": "conn-17",
+      "from": "relationship-2",
+      "to": "attribute-13"
+    },
+    {
+      "id": "conn-1762249206726",
+      "from": "entity-3",
+      "to": "attribute-1762249206726"
+    },
+    {
+      "id": "conn-1762249265936",
+      "from": "entity-1762249251600",
+      "to": "attribute-1762249265936"
+    },
+    {
+      "id": "conn-1762249311573",
+      "from": "relationship-1762249307108",
+      "to": "entity-3",
+      "cardinality": "0,N"
+    },
+    {
+      "id": "conn-1762249379718",
+      "from": "relationship-1762249307108",
+      "to": "entity-1762249251600",
+      "cardinality": "0,N"
+    },
+    {
+      "id": "conn-new-1",
+      "from": "entity-new-1",
+      "to": "attribute-new-1"
+    },
+    {
+      "id": "conn-new-2",
+      "from": "entity-new-1",
+      "to": "attribute-new-2"
+    },
+    {
+      "id": "conn-new-3",
+      "from": "entity-new-1",
+      "to": "attribute-new-3"
+    },
+    {
+      "id": "conn-new-4",
+      "from": "entity-new-1",
+      "to": "attribute-new-4"
+    },
+    {
+      "id": "conn-new-5",
+      "from": "entity-new-2",
+      "to": "attribute-new-5"
+    },
+    {
+      "id": "conn-new-6",
+      "from": "entity-new-2",
+      "to": "attribute-new-6"
+    },
+    {
+      "id": "conn-new-7",
+      "from": "entity-new-2",
+      "to": "attribute-new-7"
+    },
+    {
+      "id": "conn-new-8",
+      "from": "entity-new-3",
+      "to": "attribute-new-8"
+    },
+    {
+      "id": "conn-new-9",
+      "from": "entity-new-3",
+      "to": "attribute-new-9"
+    },
+    {
+      "id": "conn-new-10",
+      "from": "relationship-new-1",
+      "to": "attribute-new-10"
+    },
+    {
+      "id": "conn-new-11",
+      "from": "relationship-new-1",
+      "to": "attribute-new-11"
+    },
+    {
+      "id": "conn-new-factuurregel-factuur",
+      "from": "relationship-new-1",
+      "to": "entity-new-3",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-new-factuurregel-product",
+      "from": "relationship-new-1",
+      "to": "entity-new-1",
+      "cardinality": "0,N"
+    },
+    {
+      "id": "conn-new-factuurregel-service",
+      "from": "relationship-new-1",
+      "to": "entity-new-2",
+      "cardinality": "0,N"
+    },
+    {
+      "id": "conn-new-14",
+      "from": "entity-new-4",
+      "to": "attribute-new-12"
+    },
+    {
+      "id": "conn-new-15",
+      "from": "relationship-new-4",
+      "to": "entity-1",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-new-16",
+      "from": "relationship-new-4",
+      "to": "entity-new-4",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-new-17",
+      "from": "relationship-new-7",
+      "to": "relationship-2",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-new-18",
+      "from": "relationship-new-7",
+      "to": "entity-new-4",
+      "cardinality": "0,1"
+    },
+    {
+      "id": "conn-new-19",
+      "from": "entity-new-5",
+      "to": "attribute-new-13"
+    },
+    {
+      "id": "conn-new-20",
+      "from": "entity-new-5",
+      "to": "attribute-new-14"
+    },
+    {
+      "id": "conn-new-21",
+      "from": "relationship-new-9",
+      "to": "entity-new-5",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-new-22",
+      "from": "relationship-new-9",
+      "to": "entity-2",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-new-23",
+      "from": "relationship-new-8",
+      "to": "entity-new-3",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-new-24",
+      "from": "relationship-new-8",
+      "to": "entity-1",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-new-25",
+      "from": "entity-new-6",
+      "to": "attribute-new-15"
+    },
+    {
+      "id": "conn-new-26",
+      "from": "entity-new-6",
+      "to": "attribute-new-16"
+    },
+    {
+      "id": "conn-new-27",
+      "from": "entity-new-7",
+      "to": "attribute-new-17"
+    },
+    {
+      "id": "conn-new-28",
+      "from": "entity-new-7",
+      "to": "attribute-new-18"
+    },
+    {
+      "id": "conn-new-29",
+      "from": "relationship-new-2",
+      "to": "entity-new-7",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-new-30",
+      "from": "relationship-new-2",
+      "to": "entity-new-6",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-new-31",
+      "from": "relationship-new-3",
+      "to": "entity-2",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "conn-new-32",
+      "from": "relationship-new-3",
+      "to": "entity-new-7",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762249959725",
+      "from": "entity-new-4",
+      "to": "attribute-1762249959724"
+    }
+  ],
+  "exportDate": "2025-11-04T10:01:22.046Z"
+}
