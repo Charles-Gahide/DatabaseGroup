@@ -4,8 +4,8 @@
     {
       "id": "entity-1",
       "type": "entity",
-      "x": 194,
-      "y": 568,
+      "x": 209,
+      "y": 543,
       "text": "Klant",
       "color": "#3b82f6"
     },
@@ -84,32 +84,24 @@
     {
       "id": "attribute-9",
       "type": "attribute",
-      "x": 1453,
-      "y": 330,
+      "x": 1347.5814665007904,
+      "y": 316.3346345463988,
       "text": "PersoneelslidID (PK)",
       "color": "#ef4444"
     },
     {
       "id": "attribute-10",
       "type": "attribute",
-      "x": 1382,
-      "y": 458,
+      "x": 1424.9482914256037,
+      "y": 415.05170857439606,
       "text": "Naam",
-      "color": "#ef4444"
-    },
-    {
-      "id": "attribute-11",
-      "type": "attribute",
-      "x": 1155,
-      "y": 311,
-      "text": "Van wacht",
       "color": "#ef4444"
     },
     {
       "id": "relationship-1",
       "type": "relationship",
-      "x": 396,
-      "y": 400,
+      "x": 458,
+      "y": 374,
       "text": "Is eigenaar van",
       "color": "#eab308"
     },
@@ -130,36 +122,20 @@
       "color": "#ef4444"
     },
     {
-      "id": "attribute-1762249206726",
-      "type": "attribute",
-      "x": 1327,
-      "y": 250,
-      "text": "Functie",
-      "color": "#ef4444"
-    },
-    {
       "id": "entity-1762249251600",
       "type": "entity",
-      "x": 1582,
-      "y": 636,
+      "x": 1870.2765299918456,
+      "y": 743.9486759129439,
       "text": "Specialisatie",
       "color": "#3b82f6"
     },
     {
       "id": "attribute-1762249265936",
       "type": "attribute",
-      "x": 1792,
-      "y": 640,
+      "x": 1939.7184853262333,
+      "y": 859.2237946065537,
       "text": "Naam",
       "color": "#ef4444"
-    },
-    {
-      "id": "relationship-1762249307108",
-      "type": "relationship",
-      "x": 1342,
-      "y": 610,
-      "text": "Specialiseert in",
-      "color": "#eab308"
     },
     {
       "id": "entity-new-1",
@@ -244,16 +220,16 @@
     {
       "id": "attribute-new-8",
       "type": "attribute",
-      "x": 370,
-      "y": 846,
+      "x": 334,
+      "y": 824,
       "text": "FactuurID (PK)",
       "color": "#ef4444"
     },
     {
       "id": "attribute-new-9",
       "type": "attribute",
-      "x": 442,
-      "y": 912,
+      "x": 410,
+      "y": 911,
       "text": "Datum",
       "color": "#ef4444"
     },
@@ -448,6 +424,62 @@
       "y": 161,
       "text": "Neemt deel",
       "color": "#eab308"
+    },
+    {
+      "id": "relationship-1762251847181",
+      "type": "relationship",
+      "x": 1773.954886606365,
+      "y": 600.4428204727475,
+      "text": "Specialiseert in",
+      "color": "#eab308"
+    },
+    {
+      "id": "isa-1762251869021",
+      "type": "isa",
+      "x": 1299.766705366402,
+      "y": 623.4787222373897,
+      "text": "d",
+      "color": "#8b5cf6"
+    },
+    {
+      "id": "entity-1762251984540",
+      "type": "entity",
+      "x": 1510.7989918713015,
+      "y": 709.9609636080373,
+      "text": "Medewerker",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-1762251991862",
+      "type": "entity",
+      "x": 1515.6143924633466,
+      "y": 573.3073090720247,
+      "text": "Arts",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-1762252032314",
+      "type": "entity",
+      "x": 1413.1892386312925,
+      "y": 813.4273020424469,
+      "text": "Verzorger",
+      "color": "#3b82f6"
+    },
+    {
+      "id": "attribute-1762252071423",
+      "type": "attribute",
+      "x": 1625.978500694512,
+      "y": 467.8887755728153,
+      "text": "Van wacht",
+      "color": "#ef4444"
+    },
+    {
+      "id": "attribute-1762252086517",
+      "type": "attribute",
+      "x": 1506.894601741701,
+      "y": 924.7024207360569,
+      "text": "Van wacht",
+      "color": "#ef4444"
     }
   ],
   "connections": [
@@ -497,11 +529,6 @@
       "to": "attribute-10"
     },
     {
-      "id": "conn-11",
-      "from": "entity-3",
-      "to": "attribute-11"
-    },
-    {
       "id": "conn-12",
       "from": "relationship-1",
       "to": "entity-1",
@@ -514,26 +541,9 @@
       "cardinality": "1,N"
     },
     {
-      "id": "conn-1762249206726",
-      "from": "entity-3",
-      "to": "attribute-1762249206726"
-    },
-    {
       "id": "conn-1762249265936",
       "from": "entity-1762249251600",
       "to": "attribute-1762249265936"
-    },
-    {
-      "id": "conn-1762249311573",
-      "from": "relationship-1762249307108",
-      "to": "entity-3",
-      "cardinality": "0,N"
-    },
-    {
-      "id": "conn-1762249379718",
-      "from": "relationship-1762249307108",
-      "to": "entity-1762249251600",
-      "cardinality": "0,N"
     },
     {
       "id": "conn-new-1",
@@ -743,7 +753,55 @@
       "from": "entity-1762250879658",
       "to": "relationship-new-7",
       "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762251886973",
+      "from": "isa-1762251869021",
+      "to": "entity-3",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762251950614",
+      "from": "relationship-1762251847181",
+      "to": "entity-1762249251600",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762252084928",
+      "from": "entity-1762251991862",
+      "to": "attribute-1762252071423",
+      "cardinality": ""
+    },
+    {
+      "id": "conn-1762252098018",
+      "from": "attribute-1762252086517",
+      "to": "entity-1762252032314",
+      "cardinality": ""
+    },
+    {
+      "id": "conn-1762252101869",
+      "from": "isa-1762251869021",
+      "to": "entity-1762252032314",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762252105931",
+      "from": "isa-1762251869021",
+      "to": "entity-1762251991862",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762252110146",
+      "from": "isa-1762251869021",
+      "to": "entity-1762251984540",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "conn-1762252153334",
+      "from": "entity-1762251991862",
+      "to": "relationship-1762251847181",
+      "cardinality": "0,K"
     }
   ],
-  "exportDate": "2025-11-04T10:12:30.324Z"
+  "exportDate": "2025-11-04T10:30:28.692Z"
 }
