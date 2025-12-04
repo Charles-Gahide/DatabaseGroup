@@ -186,8 +186,8 @@
           "isRequired": false
         }
       ],
-      "x": 1715.7119790063302,
-      "y": 1205.8150577909928,
+      "x": 1752.7012558918314,
+      "y": 1075.874513320405,
       "color": "#10b981"
     },
     {
@@ -219,8 +219,8 @@
           "isRequired": false
         }
       ],
-      "x": 1696.3722665243095,
-      "y": 876.4671772807891,
+      "x": 1723.9899661241043,
+      "y": 755.783038417192,
       "color": "#10b981"
     },
     {
@@ -515,9 +515,34 @@
     {
       "id": "table-1764859294115",
       "name": "factuur regel",
-      "fields": [],
-      "x": 1323.9651629122973,
-      "y": 927.5824257906946,
+      "fields": [
+        {
+          "id": "field-1764859547962",
+          "name": "serviceID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        },
+        {
+          "id": "field-1764859571998",
+          "name": "productID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        },
+        {
+          "id": "field-1764859618016",
+          "name": "FactuurID",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 1312.3263470655934,
+      "y": 902.8681274637984,
       "color": "#3b82f6"
     }
   ],
@@ -625,6 +650,30 @@
       "fromFieldId": "attribute-9",
       "toFieldId": "field-1764858147182",
       "cardinality": "1:1"
+    },
+    {
+      "id": "rel-1764859674025",
+      "fromTableId": "table-1764859294115",
+      "toTableId": "entity-new-2",
+      "fromFieldId": "field-1764859547962",
+      "toFieldId": "attribute-new-5",
+      "cardinality": "1:N"
+    },
+    {
+      "id": "rel-1764859736995",
+      "fromTableId": "table-1764859294115",
+      "toTableId": "entity-new-1",
+      "fromFieldId": "field-1764859571998",
+      "toFieldId": "attribute-new-1",
+      "cardinality": "1:N"
+    },
+    {
+      "id": "rel-1764859757953",
+      "fromTableId": "table-1764859294115",
+      "toTableId": "entity-new-3",
+      "fromFieldId": "field-1764859618016",
+      "toFieldId": "attribute-new-8",
+      "cardinality": "1:N"
     }
   ]
 }
