@@ -1,0 +1,630 @@
+{
+  "name": "Dierenartsenpraktijk (Uitgebreid)",
+  "tables": [
+    {
+      "id": "entity-1",
+      "name": "Klant",
+      "fields": [
+        {
+          "id": "attribute-1",
+          "name": "EigenaarID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-2",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-3",
+          "name": "Telefoon",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-4",
+          "name": "Email",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206500-0.8993931614208649",
+          "name": "Factuur_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 0,
+      "y": 606.7795619103341,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-2",
+      "name": "Huisdier",
+      "fields": [
+        {
+          "id": "attribute-5",
+          "name": "HuisdierID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-6",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-8",
+          "name": "Geboortedatum",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206499-0.9665858130392015",
+          "name": "Klant_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206500-0.14770628555358",
+          "name": "Opname_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 715.8114410410542,
+      "y": 74.14570001735669,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-3",
+      "name": "Personeelslid",
+      "fields": [
+        {
+          "id": "attribute-9",
+          "name": "PersoneelslidID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-10",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "field-1764857921839",
+          "name": "Functie",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        }
+      ],
+      "x": 2280.232048219651,
+      "y": 473.37443857308546,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-1762249251600",
+      "name": "Specialisatie",
+      "fields": [
+        {
+          "id": "attribute-1762249265936",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        }
+      ],
+      "x": 2643.988176272696,
+      "y": 769.8572658555706,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-new-1",
+      "name": "Product",
+      "fields": [
+        {
+          "id": "attribute-new-1",
+          "name": "ProductID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-2",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-3",
+          "name": "Prijs",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-4",
+          "name": "Type (voeding/medicatie)",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        }
+      ],
+      "x": 1715.7119790063302,
+      "y": 1205.8150577909928,
+      "color": "#10b981"
+    },
+    {
+      "id": "entity-new-2",
+      "name": "Service",
+      "fields": [
+        {
+          "id": "attribute-new-5",
+          "name": "ServiceID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-6",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-7",
+          "name": "StandaardPrijs",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        }
+      ],
+      "x": 1696.3722665243095,
+      "y": 876.4671772807891,
+      "color": "#10b981"
+    },
+    {
+      "id": "entity-new-3",
+      "name": "Factuur",
+      "fields": [
+        {
+          "id": "attribute-new-8",
+          "name": "FactuurID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-9",
+          "name": "Datum",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        }
+      ],
+      "x": 856.5704715087129,
+      "y": 901.8926484139779,
+      "color": "#10b981"
+    },
+    {
+      "id": "entity-new-4",
+      "name": "Afspraak",
+      "fields": [
+        {
+          "id": "attribute-new-12",
+          "name": "DatumTijd",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-1762249959724",
+          "name": "Reden",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206500-0.6815325780397863",
+          "name": "Klant_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 659.6563369407179,
+      "y": 593.1321148610454,
+      "color": "#f97316"
+    },
+    {
+      "id": "entity-new-5",
+      "name": "Opname",
+      "fields": [
+        {
+          "id": "attribute-new-13",
+          "name": "StartDatum",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-14",
+          "name": "EindDatum",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        }
+      ],
+      "x": 90.38659233122691,
+      "y": 63.620897822689265,
+      "color": "#f97316"
+    },
+    {
+      "id": "entity-new-6",
+      "name": "Diersoort",
+      "fields": [
+        {
+          "id": "attribute-new-15",
+          "name": "DiersoortID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-16",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206499-0.26682102312581857",
+          "name": "Ras_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 1873.1345386761948,
+      "y": 0,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-new-7",
+      "name": "Ras",
+      "fields": [
+        {
+          "id": "attribute-new-17",
+          "name": "RasID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attribute-new-18",
+          "name": "Naam",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206500-0.2846374492545286",
+          "name": "Huisdier_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 1321.5596474444772,
+      "y": 68.16740506423294,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-1762250879658",
+      "name": "Consultatie",
+      "fields": [
+        {
+          "id": "entity-1762250879658-id",
+          "name": "Consultatie_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": true
+        },
+        {
+          "id": "fk-1764857206500-0.8867238786282439",
+          "name": "Afspraak_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206500-0.222571412449993",
+          "name": "Huisdier_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 1233.769988141625,
+      "y": 436.58446113747266,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-1762251991862",
+      "name": "Arts",
+      "fields": [
+        {
+          "id": "entity-1762251991862-id",
+          "name": "Arts_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": true
+        },
+        {
+          "id": "fk-1764857206500-0.423819913093732",
+          "name": "Specialisatie_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        },
+        {
+          "id": "field-1764858147182",
+          "name": "Personeel ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 3090.8202295689953,
+      "y": 414.84920633620726,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "entity-new-wachtdienst",
+      "name": "Wachtdienst",
+      "fields": [
+        {
+          "id": "attr-wacht-1",
+          "name": "WachtdienstID (PK)",
+          "type": "VARCHAR",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attr-wacht-2",
+          "name": "StartDatumTijd",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "attr-wacht-3",
+          "name": "EindDatumTijd",
+          "type": "VARCHAR",
+          "isPrimaryKey": false,
+          "isForeignKey": false,
+          "isRequired": false
+        },
+        {
+          "id": "fk-1764857206500-0.4449746783010404",
+          "name": "Arts_ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 2468.5373049351015,
+      "y": 104.56336670876237,
+      "color": "#f97316"
+    },
+    {
+      "id": "table-1764857585187",
+      "name": "Con-Per",
+      "fields": [
+        {
+          "id": "field-1764857624625",
+          "name": "CONPERID",
+          "type": "INTEGER",
+          "isPrimaryKey": true,
+          "isForeignKey": false,
+          "isRequired": true
+        },
+        {
+          "id": "field-1764857707182",
+          "name": "Conultatie ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        },
+        {
+          "id": "field-1764857829200",
+          "name": "Personeel ID",
+          "type": "INTEGER",
+          "isPrimaryKey": false,
+          "isForeignKey": true,
+          "isRequired": false
+        }
+      ],
+      "x": 1663.8503266707462,
+      "y": 401.1250029486542,
+      "color": "#3b82f6"
+    },
+    {
+      "id": "table-1764859294115",
+      "name": "factuur regel",
+      "fields": [],
+      "x": 1323.9651629122973,
+      "y": 927.5824257906946,
+      "color": "#3b82f6"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "relationship-1",
+      "fromTableId": "entity-1",
+      "toTableId": "entity-2",
+      "fromFieldId": "attribute-1",
+      "toFieldId": "fk-1764857206499-0.9665858130392015",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "relationship-new-2",
+      "fromTableId": "entity-new-7",
+      "toTableId": "entity-new-6",
+      "fromFieldId": "attribute-new-17",
+      "toFieldId": "fk-1764857206499-0.26682102312581857",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "relationship-new-3",
+      "fromTableId": "entity-2",
+      "toTableId": "entity-new-7",
+      "fromFieldId": "attribute-5",
+      "toFieldId": "fk-1764857206500-0.2846374492545286",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "relationship-new-4",
+      "fromTableId": "entity-1",
+      "toTableId": "entity-new-4",
+      "fromFieldId": "attribute-1",
+      "toFieldId": "fk-1764857206500-0.6815325780397863",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "relationship-new-7",
+      "fromTableId": "entity-new-4",
+      "toTableId": "entity-1762250879658",
+      "fromFieldId": "attribute-new-12",
+      "toFieldId": "fk-1764857206500-0.8867238786282439",
+      "cardinality": "0,1"
+    },
+    {
+      "id": "relationship-new-8",
+      "fromTableId": "entity-new-3",
+      "toTableId": "entity-1",
+      "fromFieldId": "attribute-new-8",
+      "toFieldId": "fk-1764857206500-0.8993931614208649",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "relationship-new-9",
+      "fromTableId": "entity-new-5",
+      "toTableId": "entity-2",
+      "fromFieldId": "attribute-new-13",
+      "toFieldId": "fk-1764857206500-0.14770628555358",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "relationship-1762250964312",
+      "fromTableId": "entity-2",
+      "toTableId": "entity-1762250879658",
+      "fromFieldId": "attribute-5",
+      "toFieldId": "fk-1764857206500-0.222571412449993",
+      "cardinality": "1,N"
+    },
+    {
+      "id": "relationship-1762251847181",
+      "fromTableId": "entity-1762249251600",
+      "toTableId": "entity-1762251991862",
+      "fromFieldId": "attribute-1762249265936",
+      "toFieldId": "fk-1764857206500-0.423819913093732",
+      "cardinality": "1,1"
+    },
+    {
+      "id": "rel-wacht-1",
+      "fromTableId": "entity-1762251991862",
+      "toTableId": "entity-new-wachtdienst",
+      "fromFieldId": "entity-1762251991862-id",
+      "toFieldId": "fk-1764857206500-0.4449746783010404",
+      "cardinality": "0,N"
+    },
+    {
+      "id": "rel-1764857774177",
+      "fromTableId": "table-1764857585187",
+      "toTableId": "entity-1762250879658",
+      "fromFieldId": "field-1764857707182",
+      "toFieldId": "entity-1762250879658-id",
+      "cardinality": "N:M"
+    },
+    {
+      "id": "rel-1764857846715",
+      "fromTableId": "table-1764857585187",
+      "toTableId": "entity-3",
+      "fromFieldId": "field-1764857829200",
+      "toFieldId": "attribute-9",
+      "cardinality": "M:N"
+    },
+    {
+      "id": "rel-1764858247608",
+      "fromTableId": "entity-3",
+      "toTableId": "entity-1762251991862",
+      "fromFieldId": "attribute-9",
+      "toFieldId": "field-1764858147182",
+      "cardinality": "1:1"
+    }
+  ]
+}
