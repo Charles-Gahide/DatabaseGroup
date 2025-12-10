@@ -1,10 +1,9 @@
 -- =============================================================================
--- SCRIPT: DF_create_database_team_XX.sql
+-- SCRIPT: DF_create_database_team_69.sql
 -- DOEL: Aanmaken van de tabellen (DDL) voor de dierenartsenpraktijk
--- VOLGORDE: Eerst ouders (onafhankelijke tabellen), dan kinderen (afhankelijke)
 -- =============================================================================
 
--- 1. BASIS TABELLEN (Lookup & Personen)
+-- 1. BASIS TABELLEN
 
 CREATE TABLE Klant (
     EigenaarID SERIAL PRIMARY KEY,
@@ -25,9 +24,13 @@ CREATE TABLE Ras (
     CONSTRAINT fk_ras_diersoort FOREIGN KEY (DiersoortID) REFERENCES Diersoort(DiersoortID)
 );
 
+-- AANGEPAST: Nu met contactgegevens zoals gevraagd in de opdracht
 CREATE TABLE Personeelslid (
     PersoneelID SERIAL PRIMARY KEY,
     Naam VARCHAR(100) NOT NULL,
+    Adres VARCHAR(200),
+    Telefoon VARCHAR(20),
+    Email VARCHAR(100),
     Functie VARCHAR(50) NOT NULL -- Bijv: 'Arts', 'Verzorger', 'Medewerker'
 );
 
@@ -46,7 +49,7 @@ CREATE TABLE Product (
     ProductID SERIAL PRIMARY KEY,
     Naam VARCHAR(100) NOT NULL,
     Prijs DECIMAL(10, 2) NOT NULL,
-    Type VARCHAR(20) -- Bijv: 'Voeding', 'Medicatie'
+    Type VARCHAR(20)
 );
 
 CREATE TABLE Service (
@@ -83,7 +86,7 @@ CREATE TABLE Arts_Wachtdienst (
     CONSTRAINT fk_aw_wacht FOREIGN KEY (WachtdienstID) REFERENCES Wachtdienst(WachtdienstID)
 );
 
--- 3. PROCES (Afspraken -> Consultaties -> Opnames)
+-- 3. PROCES
 
 CREATE TABLE Afspraak (
     AfspraakID SERIAL PRIMARY KEY,
@@ -101,7 +104,7 @@ CREATE TABLE Consultatie (
     ConsultatieID SERIAL PRIMARY KEY,
     Datum DATE NOT NULL,
     Diagnose TEXT,
-    AfspraakID INT UNIQUE NOT NULL, -- 1-op-1 relatie met Afspraak
+    AfspraakID INT UNIQUE NOT NULL,
     CONSTRAINT fk_consult_afspraak FOREIGN KEY (AfspraakID) REFERENCES Afspraak(AfspraakID)
 );
 
@@ -142,7 +145,6 @@ CREATE TABLE FactuurRegel (
     CONSTRAINT fk_regel_factuur FOREIGN KEY (FactuurID) REFERENCES Factuur(FactuurID),
     CONSTRAINT fk_regel_prod FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
     CONSTRAINT fk_regel_serv FOREIGN KEY (ServiceID) REFERENCES Service(ServiceID),
-    -- Constraint: Een regel is OF een product OF een service (XOR achtig)
     CONSTRAINT check_product_or_service CHECK (
         (ProductID IS NOT NULL AND ServiceID IS NULL) OR 
         (ProductID IS NULL AND ServiceID IS NOT NULL)
