@@ -1,9 +1,9 @@
 -- =============================================================================
--- SCRIPT: DF_insert_data_team_XX.sql
+-- SCRIPT: DF_insert_data_team_69.sql
 -- DOEL: Vullen van de database met testdata (Case study + Extra's)
 -- =============================================================================
 
--- 1. REFERENTIEDATA (Lookup tabellen)
+-- 1. REFERENTIEDATA
 INSERT INTO Diersoort (DiersoortID, Naam) VALUES 
 (1, 'Kat'), (2, 'Hond'), (3, 'Papegaai'), (4, 'Konijn'), (5, 'Paardachtigen');
 
@@ -33,18 +33,18 @@ INSERT INTO Service (ServiceID, Naam, StandaardPrijs) VALUES
 (6, 'Euthanasie & Verwerking', 135.00),
 (7, 'Snavelverzorging', 30.00);
 
--- 2. PERSONEEL & WACHTDIENST
-INSERT INTO Personeelslid (PersoneelID, Naam, Functie) VALUES 
-(1, 'Els Martens', 'Arts'),
-(2, 'Geert Vanaken', 'Arts'),
-(3, 'Sara Vanderelst', 'Arts'),
-(4, 'Aïsha El Founti', 'Arts'),
-(5, 'Walter Malfliet', 'Arts'),
-(6, 'Jan Peeters', 'Arts'),
-(7, 'Ine De Smet', 'Arts'),
-(8, 'Ruth Bertels', 'Verzorger'),
-(9, 'Tom Willems', 'Verzorger'),
-(10, 'Sofie Casterman', 'Medewerker');
+-- 2. PERSONEEL & WACHTDIENST (AANGEPAST MET CONTACTGEGEVENS)
+INSERT INTO Personeelslid (PersoneelID, Naam, Adres, Telefoon, Email, Functie) VALUES 
+(1, 'Els Martens', 'Kerkstraat 1, 3000 Leuven', '0475111222', 'els.martens@connect.be', 'Arts'),
+(2, 'Geert Vanaken', 'Dorpstraat 10, 3001 Heverlee', '0475222333', 'geert.vanaken@connect.be', 'Arts'),
+(3, 'Sara Vanderelst', 'Bondgenotenlaan 5, 3000 Leuven', '0475333444', 'sara.vanderelst@connect.be', 'Arts'),
+(4, 'Aïsha El Founti', 'Tiensesteenweg 80, 3010 Kessel-Lo', '0475444555', 'aisha.elfounti@connect.be', 'Arts'),
+(5, 'Walter Malfliet', 'Naamsestraat 45, 3000 Leuven', '0475555666', 'walter.malfliet@connect.be', 'Arts'),
+(6, 'Jan Peeters', 'Brusselsestraat 12, 3000 Leuven', '0475666777', 'jan.peeters@connect.be', 'Arts'),
+(7, 'Ine De Smet', 'Parkstraat 22, 3000 Leuven', '0475777888', 'ine.desmet@connect.be', 'Arts'),
+(8, 'Ruth Bertels', 'Diestsestraat 100, 3000 Leuven', '0475888999', 'ruth.bertels@connect.be', 'Verzorger'),
+(9, 'Tom Willems', 'Vaartstraat 7, 3000 Leuven', '0475999000', 'tom.willems@connect.be', 'Verzorger'),
+(10, 'Sofie Casterman', 'Vismarkt 3, 3000 Leuven', '0475000111', 'sofie.casterman@connect.be', 'Medewerker');
 
 INSERT INTO Arts_Specialisatie (PersoneelID, SpecialisatieID) VALUES (4, 1);
 
@@ -85,7 +85,7 @@ INSERT INTO Huisdier (HuisdierID, Naam, Geboortedatum, EigenaarID, RasID) VALUES
 (13, 'Bella', '2017-11-05', 10, 5),
 (14, 'Nijntje', '2022-06-15', 11, 8);
 
--- 4. PROCES (Afspraken, Consultaties, Opnames)
+-- 4. PROCES
 INSERT INTO Afspraak (AfspraakID, DatumTijd, Reden, KlantID, HuisdierID, PersoneelID) VALUES 
 (1, '2025-08-28 15:00:00', 'Bloed in urine', 1, 1, 1),
 (2, '2025-09-03 09:00:00', 'Controle blaas', 1, 1, 2),
@@ -149,7 +149,7 @@ INSERT INTO FactuurRegel (RegelID, Aantal, RegelPrijs, FactuurID, ServiceID, Pro
 (13, 1, 40.00, 9, 2, NULL),
 (14, 1, 80.29, 9, NULL, 2);
 
--- 6. RESET TELLERS (Sequences)
+-- 6. RESET TELLERS
 SELECT setval('klant_eigenaarid_seq', (SELECT MAX(EigenaarID) FROM Klant));
 SELECT setval('diersoort_diersoortid_seq', (SELECT MAX(DiersoortID) FROM Diersoort));
 SELECT setval('ras_rasid_seq', (SELECT MAX(RasID) FROM Ras));
