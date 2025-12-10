@@ -1,8 +1,10 @@
--- =============================================
--- AANMAKEN DATABASE STRUCTUUR (DDL)
--- =============================================
+-- =============================================================================
+-- SCRIPT: DF_create_database_team_XX.sql
+-- DOEL: Aanmaken van de tabellen (DDL) voor de dierenartsenpraktijk
+-- VOLGORDE: Eerst ouders (onafhankelijke tabellen), dan kinderen (afhankelijke)
+-- =============================================================================
 
--- 1. TABELLEN VOOR DE BASISGEGEVENS (Lookup & Personen)
+-- 1. BASIS TABELLEN (Lookup & Personen)
 
 CREATE TABLE Klant (
     EigenaarID SERIAL PRIMARY KEY,
@@ -53,7 +55,7 @@ CREATE TABLE Service (
     StandaardPrijs DECIMAL(10, 2) NOT NULL
 );
 
--- 2. TABELLEN VOOR DE KERNENTITEITEN & RELATIES
+-- 2. KERNENTITEITEN & KOPPELTABELLEN
 
 CREATE TABLE Huisdier (
     HuisdierID SERIAL PRIMARY KEY,
@@ -65,7 +67,6 @@ CREATE TABLE Huisdier (
     CONSTRAINT fk_dier_ras FOREIGN KEY (RasID) REFERENCES Ras(RasID)
 );
 
--- Koppeltabel: Welke arts heeft welke specialisatie?
 CREATE TABLE Arts_Specialisatie (
     PersoneelID INT NOT NULL,
     SpecialisatieID INT NOT NULL,
@@ -74,7 +75,6 @@ CREATE TABLE Arts_Specialisatie (
     CONSTRAINT fk_as_spec FOREIGN KEY (SpecialisatieID) REFERENCES Specialisatie(SpecialisatieID)
 );
 
--- Koppeltabel: Welke arts heeft wanneer wachtdienst?
 CREATE TABLE Arts_Wachtdienst (
     PersoneelID INT NOT NULL,
     WachtdienstID INT NOT NULL,
@@ -83,7 +83,7 @@ CREATE TABLE Arts_Wachtdienst (
     CONSTRAINT fk_aw_wacht FOREIGN KEY (WachtdienstID) REFERENCES Wachtdienst(WachtdienstID)
 );
 
--- 3. TABELLEN VOOR HET ZORGPROCES (Afspraak -> Consultatie -> Opname)
+-- 3. PROCES (Afspraken -> Consultaties -> Opnames)
 
 CREATE TABLE Afspraak (
     AfspraakID SERIAL PRIMARY KEY,
@@ -101,11 +101,10 @@ CREATE TABLE Consultatie (
     ConsultatieID SERIAL PRIMARY KEY,
     Datum DATE NOT NULL,
     Diagnose TEXT,
-    AfspraakID INT UNIQUE NOT NULL, -- Zorgt voor de 1-op-1 relatie met Afspraak
+    AfspraakID INT UNIQUE NOT NULL, -- 1-op-1 relatie met Afspraak
     CONSTRAINT fk_consult_afspraak FOREIGN KEY (AfspraakID) REFERENCES Afspraak(AfspraakID)
 );
 
--- Koppeltabel: Wie was er aanwezig bij de consultatie? (Meerdere artsen/verzorgers mogelijk)
 CREATE TABLE Consultatie_Personeel (
     ConsultatieID INT NOT NULL,
     PersoneelID INT NOT NULL,
@@ -119,12 +118,12 @@ CREATE TABLE Opname (
     StartDatum DATE NOT NULL,
     EindDatum DATE,
     HuisdierID INT NOT NULL,
-    ConsultatieID INT, -- Kan leeg zijn als opname niet direct na consult is
+    ConsultatieID INT,
     CONSTRAINT fk_opname_dier FOREIGN KEY (HuisdierID) REFERENCES Huisdier(HuisdierID),
     CONSTRAINT fk_opname_consult FOREIGN KEY (ConsultatieID) REFERENCES Consultatie(ConsultatieID)
 );
 
--- 4. TABELLEN VOOR DE FINANCIËN
+-- 4. FINANCIËN
 
 CREATE TABLE Factuur (
     FactuurID SERIAL PRIMARY KEY,
@@ -143,7 +142,7 @@ CREATE TABLE FactuurRegel (
     CONSTRAINT fk_regel_factuur FOREIGN KEY (FactuurID) REFERENCES Factuur(FactuurID),
     CONSTRAINT fk_regel_prod FOREIGN KEY (ProductID) REFERENCES Product(ProductID),
     CONSTRAINT fk_regel_serv FOREIGN KEY (ServiceID) REFERENCES Service(ServiceID),
-    -- Constraint: Een regel moet OF een product OF een service zijn, niet allebei en niet geen van beide.
+    -- Constraint: Een regel is OF een product OF een service (XOR achtig)
     CONSTRAINT check_product_or_service CHECK (
         (ProductID IS NOT NULL AND ServiceID IS NULL) OR 
         (ProductID IS NULL AND ServiceID IS NOT NULL)
